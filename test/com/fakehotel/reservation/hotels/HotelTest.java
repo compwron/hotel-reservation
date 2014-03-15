@@ -24,21 +24,21 @@ public class HotelTest {
 
     @Test
     public void shouldHaveRatingForRegularCustomerOnWeekday() {
-        assertThat(hotel.priceFor(RateType.Weekday, CustomerType.Regular), is(110));
+        assertThat(hotel.priceFor(RateType.Weekday, CustomerType.Regular), is(100));
     }
 
     @Test
     public void shouldHaveRatingForRegularCustomerOnWeekend() {
-        assertThat(hotel.priceFor(RateType.Weekend, CustomerType.Regular), is(90));
-    }
-
-    @Test
-    public void shouldHaveRatingForRewardsCustomerOnWeekend() {
-        assertThat(hotel.priceFor(RateType.Weekend, CustomerType.Rewards), is(90));
+        assertThat(hotel.priceFor(RateType.Weekend, CustomerType.Regular), is(150));
     }
 
     @Test
     public void shouldHaveRatingForRewardsCustomerOnWeekday() {
-        assertThat(hotel.priceFor(RateType.Weekday, CustomerType.Rewards), is(90));
+        assertThat(hotel.priceFor(RateType.Weekday, CustomerType.Rewards), is(80));
+    }
+
+    @Test
+    public void shouldHaveRatingForRewardsCustomerOnWeekend() {
+        assertThat(hotel.priceFor(RateType.Weekend, CustomerType.Rewards), is(125));
     }
 }
