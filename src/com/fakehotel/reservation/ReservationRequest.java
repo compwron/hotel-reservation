@@ -10,7 +10,7 @@ public class ReservationRequest {
     private CustomerType customerType;
 
     public ReservationRequest(String rawRequest) {
-        this.rateType = RateType.Weekday;
+        this.rateType = RateType.from(rawRequest);
         this.customerType = CustomerType.Regular;
     }
 }
