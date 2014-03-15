@@ -1,12 +1,19 @@
 package com.fakehotel.reservation.hotels;
 
 import com.fakehotel.reservation.ReservationRequest;
+import lombok.AllArgsConstructor;
 
+@AllArgsConstructor
 public class Hotels {
-    public Hotels(Hotel... hotels) {
-    }
+    private Hotel[] hotels;
 
     public String hotelWithBestRateFor(ReservationRequest request) {
-        return null;
+        Hotel hotelWithBestRate = hotels[0];
+        for (Hotel hotel : hotels) {
+            if (hotel.priceFor(request) < hotelWithBestRate.priceFor(request)) {
+                hotelWithBestRate = hotel;
+            }
+        }
+        return hotelWithBestRate.getHotelName();
     }
 }
