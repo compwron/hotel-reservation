@@ -1,11 +1,13 @@
 package com.fakehotel.reservation.hotels;
 
 import com.fakehotel.reservation.ReservationRequest;
-import lombok.AllArgsConstructor;
 
-@AllArgsConstructor
 public class Hotels {
     private Hotel[] hotels;
+
+    public Hotels(Hotel... hotels) {
+        this.hotels = hotels;
+    }
 
     public String hotelWithBestRateFor(ReservationRequest request) {
         Hotel hotelWithBestRate = hotels[0];
