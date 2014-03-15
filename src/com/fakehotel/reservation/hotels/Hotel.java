@@ -12,8 +12,12 @@ public class Hotel {
     private final Integer rating;
     private final List<Rate> rates;
 
-    public Integer priceFor(RateType weekday, CustomerType regular) {
-
-        return 110;
+    public Integer priceFor(RateType rateType, CustomerType customerType) {
+        for (Rate rate : rates) {
+            if (rate.isFor(rateType, customerType)) {
+                return rate.getCost();
+            }
+        }
+        return null; // TODO: default price if there are any rates
     }
 }
