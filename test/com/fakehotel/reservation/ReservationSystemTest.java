@@ -13,6 +13,6 @@ public class ReservationSystemTest {
     public void shouldReserveCheapestRoom(){
         Hotels hotels = new DefaultHotels().hotels();
         ReservationSystem reservationSystem = new ReservationSystem(newArrayList("Regular: 20Mar2009(fri)"), hotels);
-        assertThat(reservationSystem.reservationResults(), is("lakewood"));
+        assertThat(reservationSystem.reservationResults(), is("Lakewood"));
     }
 }

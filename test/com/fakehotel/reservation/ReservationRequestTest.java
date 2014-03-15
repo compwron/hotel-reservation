@@ -28,4 +28,9 @@ public class ReservationRequestTest {
         ReservationRequest request = new ReservationRequest("Rewards: 20Mar2009(fri)");
         assertThat(request.getCustomerType(), is(CustomerType.Rewards));
     }
+
+    @Test
+    public void shouldHaveMultipleRateTypesPerRequestWhenRequestHasWeekdaysAndWeekendDays(){
+//
+    }
 }

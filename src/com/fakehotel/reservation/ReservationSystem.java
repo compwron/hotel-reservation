@@ -19,7 +19,16 @@ public class ReservationSystem {
     }
 
     private List<ReservationRequest> reservationRequestsFrom(List<String> lines) {
-        return null;
+        return newArrayList(Collections2.transform(lines, reservationRequestFromLine()));
+    }
+
+    private Function<? super String, ReservationRequest> reservationRequestFromLine() {
+        return new Function<String, ReservationRequest>() {
+            @Override
+            public ReservationRequest apply(String line) {
+                return new ReservationRequest(line);
+            }
+        };
     }
 
     public String reservationResults() {
