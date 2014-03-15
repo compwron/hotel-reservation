@@ -15,7 +15,7 @@ public class Hotel {
     private final Integer rating;
     private final List<Rate> rates;
 
-    public Integer priceFor(RateType rateType, CustomerType customerType) {
+    public Integer priceFor(List<RateType> rateTypes, CustomerType customerType) {
         for (Rate rate : rates) {
             if (rate.isFor(rateType, customerType)) {
                 return rate.getCost();
