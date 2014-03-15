@@ -1,5 +1,6 @@
 package com.fakehotel.reservation;
 
+import com.fakehotel.reservation.hotels.DefaultHotels;
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
 
@@ -12,7 +13,7 @@ public class Main {
         String fileLocation = "input/sampleInput.txt";
         List<String> lines = Files.readLines(new File(fileLocation), Charsets.UTF_8);
 
-        ReservationSystem reservationSystem = new ReservationSystem(lines);
+        ReservationSystem reservationSystem = new ReservationSystem(lines, new DefaultHotels().hotels());
         System.out.println(reservationSystem.reservationResults());
     }
 }

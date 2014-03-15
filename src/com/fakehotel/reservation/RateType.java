@@ -1,4 +1,5 @@
 package com.fakehotel.reservation;
 
-public class ReservationTest {
+public enum RateType {
+    Weekday
 }
