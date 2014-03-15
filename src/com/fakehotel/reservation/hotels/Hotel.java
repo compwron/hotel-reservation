@@ -8,7 +8,7 @@ import java.util.List;
 
 @AllArgsConstructor
 public class Hotel {
-
+    private final String hotelName;
     private final Integer rating;
     private final List<Rate> rates;
 

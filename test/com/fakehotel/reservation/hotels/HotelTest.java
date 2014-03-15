@@ -19,7 +19,7 @@ public class HotelTest {
         Rate weekdayRewards = new Rate(RateType.Weekday, CustomerType.Rewards, 80);
         Rate weekendRewards = new Rate(RateType.Weekend, CustomerType.Rewards, 125);
 
-        hotel = new Hotel(3, newArrayList(weekdayRegular, weekendRegular, weekdayRewards, weekendRewards));
+        hotel = new Hotel("hotel name", 3, newArrayList(weekdayRegular, weekendRegular, weekdayRewards, weekendRewards));
     }
 
     @Test

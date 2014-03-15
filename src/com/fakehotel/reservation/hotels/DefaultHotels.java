@@ -15,7 +15,7 @@ public class DefaultHotels {
         Rate weekendRegular = new Rate(RateType.Weekend, CustomerType.Regular, 90);
         Rate weekdayRewards = new Rate(RateType.Weekday, CustomerType.Rewards, 80);
         Rate weekendRewards = new Rate(RateType.Weekend, CustomerType.Rewards, 80);
-        return new Hotel(3, newArrayList(weekdayRegular, weekendRegular, weekdayRewards, weekendRewards));
+        return new Hotel("Lakewood", 3, newArrayList(weekdayRegular, weekendRegular, weekdayRewards, weekendRewards));
     }
 
     private Hotel bridgewood() {
@@ -23,7 +23,7 @@ public class DefaultHotels {
         Rate weekendRegular = new Rate(RateType.Weekend, CustomerType.Regular, 60);
         Rate weekdayRewards = new Rate(RateType.Weekday, CustomerType.Rewards, 110);
         Rate weekendRewards = new Rate(RateType.Weekend, CustomerType.Rewards, 50);
-        return new Hotel(4, newArrayList(weekdayRegular, weekendRegular, weekdayRewards, weekendRewards));
+        return new Hotel("Bridgewood", 4, newArrayList(weekdayRegular, weekendRegular, weekdayRewards, weekendRewards));
     }
 
     private Hotel ridgewood() {
@@ -31,6 +31,6 @@ public class DefaultHotels {
         Rate weekendRegular = new Rate(RateType.Weekend, CustomerType.Regular, 150);
         Rate weekdayRewards = new Rate(RateType.Weekday, CustomerType.Rewards, 100);
         Rate weekendRewards = new Rate(RateType.Weekend, CustomerType.Rewards, 40);
-        return new Hotel(5, newArrayList(weekdayRegular, weekendRegular, weekdayRewards, weekendRewards));
+        return new Hotel("Ridgeewood", 5, newArrayList(weekdayRegular, weekendRegular, weekdayRewards, weekendRewards));
     }
 }
