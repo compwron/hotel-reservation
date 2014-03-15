@@ -11,6 +11,6 @@ public class ReservationRequest {
 
     public ReservationRequest(String rawRequest) {
         this.rateType = RateType.from(rawRequest);
-        this.customerType = CustomerType.Regular;
+        this.customerType = CustomerType.from(rawRequest);
     }
 }

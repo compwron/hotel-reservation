@@ -1,8 +1,12 @@
 package com.fakehotel.reservation;
 
-/**
- * Created by Thoughtworker on 3/14/14.
- */
 public enum CustomerType {
-    Rewards, Regular
+    Rewards, Regular;
+
+    public static CustomerType from(String rawRequest) {
+        if (rawRequest.contains(Rewards.name())) {
+            return Rewards;
+        }
+        return Regular;
+    }
 }
